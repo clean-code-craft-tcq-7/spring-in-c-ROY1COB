@@ -6,15 +6,19 @@ struct Stats compute_statistics(const float* numbers, int count) {
     float Min = 0.0f;
     float Max = 0.0f;
 
-    for(int i=0;i<=4;i++)
-    avg +=numbers[i];
     for (int i = 0; i < count; i++) {
-        if (numbers[i] < Min) {
+        if (i==0){
+            Min=numbers[i];
+            Max=numbers[i];
+        }else{
+        if(numbers[i] < Min) {
             Min = arr[i];
         }
-        if (numbers[i] > Max) {
+        if(numbers[i] > Max) {
             Max = arr[i];
         }
+    }
+        avg +=numbers[i];
     }
 struct  stats s;
 s.average = avg/count;

@@ -12,7 +12,10 @@ TEST(Statistics, ReportsAverageMinMax) {
     EXPECT_LT(fabsf(computedStats.min - 1.5), epsilon);
 }
 
-//TEST(Statistics, AverageNaNForEmpty) {
-//    float values[1] = {};
-//    auto computedStats = compute_statistics(values, 0);
-//}
+// TEST(Statistics, AverageNaNForEmpty) {
+//     float values[1] = {};
+//     auto computedStats = compute_statistics(values, 0);
+//     EXPECT_TRUE(isnana(computedStats.average));
+//     EXPECT_TRUE(isnan(computedStats.max));
+//     EXPECT_TRUE(isnan(computedStats.min));
+// }
