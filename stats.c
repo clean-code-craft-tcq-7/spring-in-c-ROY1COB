@@ -20,4 +20,5 @@ struct  stats s;
 s.average = avg/count;
 s.max= Max;
 s.min = Min; 
+return s;
 }
